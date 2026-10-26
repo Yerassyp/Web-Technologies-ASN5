@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 - JavaScript Basics</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#home">Yerassyl Irangait</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#basics">JavaScript Basics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#dom">DOM</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#todo">To-Do List</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section id="basics" class="container py-4 py-lg-5">
+            <h1 class="mb-3">JavaScript Basics</h1>
+            <p class="mb-4">Web Technologies 1 - Assignment 5 | Group SE-2523</p>
+            <h2 class="mb-4">Part 1: Introduction to JavaScript</h2>
+
+            <article class="bg-white border rounded p-4 mb-4">
+                <h3 class="h5 mb-3">Task 0: First Script</h3>
+                <p class="mb-0">An alert appears when the page loads. Open the browser console (F12) to see my name and group.</p>
+            </article>
+
+            <article class="bg-white border rounded p-4">
+                <h3 class="h5 mb-3">Task 1: Variables &amp; Operators</h3>
+                <p class="mb-0">Open the browser console (F12) to see different data types, arithmetic operations, and string concatenation.</p>
+            </article>
+        </section>
+
+        <section id="dom" class="container py-4 py-lg-5">
+            <h2 class="mb-4">Part 2: DOM Manipulation</h2>
+
+            <article class="bg-white border rounded p-4 mb-4">
+                <h3 class="h5 mb-3">Task 2: Changing Content</h3>
+                <p id="changeText">This is the original paragraph.</p>
+                <button id="changeTextButton" class="btn btn-primary" type="button">Change Text</button>
+            </article>
+
+            <article class="bg-white border rounded p-4 mb-4">
+                <h3 class="h5 mb-3">Task 3: Changing Styles</h3>
+                <div id="styleBox" class="demo-box mb-3">This block can change its background color and font size.</div>
+                <div class="d-flex flex-wrap gap-2">
+                    <button id="changeColorButton" class="btn btn-primary" type="button">Change Color</button>
+                    <button id="changeFontButton" class="btn btn-outline-primary" type="button">Change Font Size</button>
+                </div>
+            </article>
+
+            <article class="bg-white border rounded p-4">
+                <h3 class="h5 mb-3">Task 4: Creating &amp; Removing Elements</h3>
+                <ul id="itemList" class="list-group mb-3"></ul>
+                <div class="d-flex flex-wrap gap-2">
+                    <button id="addItemButton" class="btn btn-primary" type="button">Add Item</button>
+                    <button id="removeItemButton" class="btn btn-outline-secondary" type="button">Remove Item</button>
+                </div>
+            </article>
+        </section>
+
+        <section id="events" class="container py-4 py-lg-5">
+            <h2 class="mb-4">Part 3: Events</h2>
+
+            <article class="bg-white border rounded p-4 mb-4">
+                <h3 class="h5 mb-3">Task 5: Mouse Events</h3>
+                <div id="mouseBox" class="mouse-box rounded">Move your mouse here</div>
+            </article>
+
+            <article class="bg-white border rounded p-4 mb-4">
+                <h3 class="h5 mb-3">Task 6: Keyboard Events</h3>
+                <label for="keyboardInput" class="form-label">Type something:</label>
+                <input id="keyboardInput" type="text" class="form-control mb-3" placeholder="Type here">
+                <p class="mb-0">Current value: <span id="keyboardOutput"></span></p>
+            </article>
+
+            <article class="bg-white border rounded p-4">
+                <h3 class="h5 mb-3">Task 7: Form Validation (Optional)</h3>
+                <form id="validationForm" novalidate>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-4">
+                            <label for="validationName" class="form-label">Name</label>
+                            <input id="validationName" type="text" class="form-control">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label for="validationEmail" class="form-label">Email</label>
+                            <input id="validationEmail" type="email" class="form-control">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label for="validationPassword" class="form-label">Password</label>
+                            <input id="validationPassword" type="password" class="form-control">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                    <p id="validationMessage" class="mt-3 mb-0" aria-live="polite"></p>
+                </form>
+            </article>
+        </section>
+
+        <section id="todo" class="container py-4 py-lg-5">
+            <h2 class="mb-4">Part 4: Interactive To-Do List</h2>
+
+            <article class="bg-white border rounded p-4">
+                <h3 class="h5 mb-3">Task 8: To-Do App</h3>
+                <form id="todoForm" class="row g-2 mb-3">
+                    <div class="col-12 col-sm-9">
+                        <label for="todoInput" class="visually-hidden">New task</label>
+                        <input id="todoInput" type="text" class="form-control" placeholder="Enter a task">
+                    </div>
+                    <div class="col-12 col-sm-3">
+                        <button type="submit" class="btn btn-primary w-100">Add Task</button>
+                    </div>
+                </form>
+                <ul id="todoList" class="list-group"></ul>
+            </article>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p class="mb-0">&copy; 2026 Yerassyl Irangait</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

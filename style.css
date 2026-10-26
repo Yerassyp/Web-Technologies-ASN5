@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.demo-box {
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.mouse-box {
+    width: 220px;
+    height: 120px;
+    background-color: #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+}
